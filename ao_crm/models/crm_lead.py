@@ -57,9 +57,9 @@ class Lead(models.Model):
             if lead.team_id:
                 team_ids.add(lead.team_id.id)
         # OR all team_ids
-        search_domain = []
+        search_domain = [('|'), ('team_ids', '=', False)]
         if team_ids:
-            search_domain += [('|')] * (len(team_ids) - 1)
+            search_domain += [('|')] * (len(team_ids)-1)
             for team_id in team_ids:
                 search_domain.append(('team_ids', '=', team_id))
         # AND with cases types

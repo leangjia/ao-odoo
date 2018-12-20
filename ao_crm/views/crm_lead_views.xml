@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <odoo>
 
-    <record model="ir.ui.view" id="crm_case_form_view_oppor">
+    <record id="crm_case_form_view_oppor" model="ir.ui.view" >
         <field name="name">Opportunities</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
@@ -34,7 +34,7 @@
         </field>
     </record>
 
-    <record id="crm_case_form_view_oppor" model="ir.ui.view">
+    <record id="crm_case_form_view_stage_type" model="ir.ui.view">
         <field name="name">crm.lead.form.opportunity</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm_stage_type.crm_case_form_view_oppor"/>
